@@ -1,0 +1,6 @@
+Blog work session objectives
+
+Add the Blog section. The projects section. The About section.
+Add the dynamic slug to these categories and pages.
+Check for styles in the component and add them.
+
