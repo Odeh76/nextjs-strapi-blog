@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import React from 'react'
-import { PostDetail } from '../../components'
-import { getPosts, getPostDetails } from '../../services'
+import { getPostDetails } from '../../services'
 
 
 const PostDetails = ({post}) => {
@@ -10,8 +10,22 @@ const PostDetails = ({post}) => {
     <>
     {post.map((post) => (
       <>
-      <h1>{post.attributes.Title}</h1>
-      <h1>{post.attributes.Content}</h1>
+      <div className='container lg:max-w-[960px] mx-auto sm:w-[85%] px-10 mb-8 bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12'>
+        <div className='mx-auto block relative overflow-hidden shadow-md pb-80 mb-6'>
+            <h1 className='pb-8 py-4 px-4 text-3xl font-semibold'>Author: {post.attributes.author.data.attributes.Name}</h1>
+            <h1 className='pb-8 transition duration-100 text-left mb-6 px-4 mt-4 text-3xl font-semibold'>Title: {post.attributes.Title}</h1>
+            <h1 className='pb-8 px-4'>Excerpt: {post.attributes.Excerpt}</h1>
+            <p className='pb-8 px-4'>Content: {post.attributes.Content}</p>
+            <Image
+            width={760}
+            height={760}
+            quality={95}
+            src={`http://localhost:1337${post.attributes.FeaturedImage.data.attributes.url}`}
+            alt={post.attributes.Title}
+            className="w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+            />
+        </div>
+      </div>
       </>
     ))}
     </>
