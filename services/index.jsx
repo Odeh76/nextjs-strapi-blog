@@ -106,3 +106,22 @@ export const getNavLinks = async () => {
   const result = await request(graphqlAPI, query);
   return result.navLinks.data
 }
+
+export const getFooterLinks = async () => {
+  const query = gql`
+  query GetFooterLinks {
+    footers{
+      data{
+        attributes{
+          Name
+          Slug
+          SocialMediaUrl
+        }
+      }
+    }
+  }
+  `
+
+  const result = await request(graphqlAPI, query);
+  return result.footers.data
+}

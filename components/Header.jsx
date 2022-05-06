@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getNavLinks } from '../services'
-
+import Footer from '../components/Footer'
 
 
 
@@ -25,7 +25,7 @@ const Header = () => {
             <div className='hidden md:float-left md:contents'>
                 {navLinks.map((navLink) => (
                     <Link key={navLink.attributes.Slug} href={`/${navLink.attributes.Slug}`}>
-                    <span className='md:float-right mt-2 align-middle text-white text-2xl ml-4 font-semibold cursor-pointer'>
+                    <span className='md:float-right hover:bg-slate-50 hover:text-black rounded-full px-2 mt-2 align-middle text-white text-2xl ml-4 font-semibold cursor-pointer'>
                         {navLink.attributes.Name}
                     </span>
                     </Link>

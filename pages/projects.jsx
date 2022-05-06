@@ -1,9 +1,25 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 function Projects() {
   return (
     <div className='container mx-auto px-10 mb-8'>
-      <h1 className='text-white'>Here are some of the things I've worked on. </h1>
+      <h1 className='text-white text-4xl mb-8 font-semibold'>Here are some of the things I've worked on. </h1>
+      <div className='grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-2 mx-auto justify-items-center max-w-[800px]'>
+        <h1 className='text-white text-3xl font-semibold transition ease-in-out delay-50 hover:bg-slate-50 hover:text-black border-solid border-white-400 border h-96 flex justify-center items-center rounded text-center w-full max-w-[400px]'>
+          <Link href='/'>InZa Lab</Link>
+        </h1>
+        <h1 className='text-white text-3xl font-semibold transition ease-in-out delay-50 hover:bg-slate-50 hover:text-black border-solid border-white-400 border h-96 flex justify-center items-center rounded text-center w-full max-w-[400px]'>
+          <Link href='/'>InZa Lab</Link>
+        </h1>
+        <h1 className='text-white text-3xl font-semibold transition ease-in-out delay-50 hover:bg-slate-50 hover:text-black border-solid border-white-400 border h-96 flex justify-center items-center rounded text-center w-full max-w-[400px]'>
+          <Link href='/'>InZa Lab</Link>
+        </h1>
+        <h1 className='text-white text-3xl font-semibold transition ease-in-out delay-50 hover:bg-slate-50 hover:text-black border-solid border-white-400 border h-96 flex justify-center items-center rounded text-center w-full max-w-[400px]'>
+          <Link href='/'>InZa Lab</Link>
+        </h1>
+      </div>
     </div>
   )
 }

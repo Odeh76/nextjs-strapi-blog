@@ -1,6 +1,10 @@
-Blog work session objectives
+Blog objectives
 
-Add the Blog section. The projects section. The About section.
-Add the dynamic slug to these categories and pages.
-Check for styles in the component and add them.
+Add the Blog section. The projects section. The About section. done
+Add the dynamic slug to these categories and pages. done
+Check for styles in the component and add them. done
+Add content and styles for About page
+Add footer links dynamically done
+Add site meta data?
+Add theming to website
 
