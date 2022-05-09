@@ -3,8 +3,11 @@ Blog objectives
 Add the Blog section. The projects section. The About section. done
 Add the dynamic slug to these categories and pages. done
 Check for styles in the component and add them. done
-Add content and styles for About page
 Add footer links dynamically done
-Add site meta data?
+Add content and styles for About page
+Add mobile menu
 Add theming to website
+Add data and graph project, inzalab to projects pages.
+Edit blog posts
+Deploy
 

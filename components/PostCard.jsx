@@ -4,7 +4,7 @@ import Image from 'next/image'
 const PostCard = ({ post }) => {
 
   return (
-    <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <div className='bg-black text-white dark:text-black dark:bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='block relative overflow-hidden shadow-md pb-80 mb-6'>
       <h1 className='transition duration-100 text-left mb-6 px-4 mt-4 cursor-pointer hover:text-green-600 text-3xl font-semibold'>
         <Link href={`/post/${post.Slug}`}>
