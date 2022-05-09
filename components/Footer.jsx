@@ -16,7 +16,7 @@ const Footer = () => {
     <div className='flex justify-center items-center text-black dark:text-white text-2xl h-24 overflow-hidden wrap'>
       {footerLinks.map((footerLink) => (
         <a key={footerLink.attributes.Slug} rel={"noreferrer"} target="_blank" href={`${footerLink.attributes.SocialMediaUrl}`}>
-          <span className='mx-3 py-2 px-2 font-semibold cursor-pointer'>
+          <span className='hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-full mx-3 py-2 px-2 font-semibold cursor-pointer'>
             {footerLink.attributes.Name}
           </span>
         </a>

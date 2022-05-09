@@ -17,12 +17,15 @@ function About() {
           <li>GraphQL</li>
           <li>Wordpress</li>
         </ul>
-         <p className='text-xl py-8'>
-         This blog / portfolio is built with <a className='font-bold underline' target="_blank" href='https://nextjs.org/'>NextJS</a> and uses <a className='font-bold underline' target="_blank" href='https://strapi.io/'>Strapi</a> as a backend 
-           headless CMS, and <a className='font-bold underline' target="_blank" href='https://graphql.org/'>GraphQL</a> as the
-            data querying language.
-
-         </p>
+         <div className='text-2xl py-8'>
+         This blog / portfolio is built with:
+         <div className='grid grid-cols-2 text-lg max-w-[400px] py-2 gap-2'>
+            <a target="_blank" href='https://nextjs.org/'>NextJS</a>
+            <a target="_blank" href='https://tailwindcss.com/'>TailwindCSS</a>
+            <a target="_blank" href='https://strapi.io/'>Strapi</a>
+            <a target="_blank" href='https://graphql.org/'>GraphQL</a> 
+         </div>
+         </div>
     </div>
   )
 }
