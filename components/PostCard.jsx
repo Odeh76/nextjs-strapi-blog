@@ -3,9 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 const PostCard = ({ post }) => {
 
-  console.log(process.env.NEXT_PUBLIC_STRAPI_ENDPOINT)
-  console.log(process.env.NEXT_PUBLIC_STRAPI_ENDPOINT_PRODUCTION)
-
   return (
     <div className='container w-10/12 max-w-[960px] mx-auto rounded'>
       <div className='block relative overflow-hidden'>
@@ -20,7 +17,7 @@ const PostCard = ({ post }) => {
           height={760}
           layout="responsive"
           quality={95}
-          src={`https://nextjs-strapi-blog-app-sawyn.ondigitalocean.app${post.FeaturedImage.data.attributes.url}`}
+          src={`http://localhost:1337${post.FeaturedImage.data.attributes.url}`}
           alt={post.Title}
           className="w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
           />
