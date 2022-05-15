@@ -1,7 +1,6 @@
 import {request, gql} from 'graphql-request'
 
 const graphqlAPI = process.env.NEXT_PUBLIC_STRAPI_ENDPOINT;
-const productionGraphqlAPI = process.env.NEXT_PUBLIC_STRAPI_ENDPOINT_PRODUCTION;
 
 export const getPosts = async () => {
     const query = gql`
@@ -29,33 +28,6 @@ export const getPosts = async () => {
     const result = await request(graphqlAPI, query);
     return result.posts.data
 }
-export const getPostsProduction = async () => {
-    const query = gql`
-    query getPosts {
-      posts{
-        data{
-          attributes{
-            Title
-            Slug
-            Excerpt
-            Content
-            FeaturedImage{
-              data{
-                attributes{
-                  url
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    `
-
-    const result = await request(productionGraphqlAPI, query);
-    return result.posts.data
-}
-
 
 export const getPostDetails = async (Slug) => {
   const query = gql`
