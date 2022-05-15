@@ -16,14 +16,14 @@ const PostDetails = ({post}) => {
             <h1 className='pb-8 transition duration-100 text-left mb-6 px-4 mt-4 text-3xl font-semibold'>Title: {post.attributes.Title}</h1>
             <h1 className='pb-8 px-4'>Excerpt: {post.attributes.Excerpt}</h1>
             <p className='pb-8 px-4'>Content: {post.attributes.Content}</p>
-            <Image
+            {/* <Image
             width={760}
             height={760}
             quality={95}
             src={`http://localhost:1337${post.attributes.FeaturedImage.data.attributes.url}`}
             alt={post.attributes.Title}
             className="w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
-            />
+            /> */}
         </div>
       </div>
       </>
