@@ -20,7 +20,7 @@ const PostDetails = ({post}) => {
             width={760}
             height={760}
             quality={95}
-            src={`http://localhost:1337${post.attributes.FeaturedImage.data.attributes.url}`}
+            src={`https://nextjs-strapi-blog-app-sawyn.ondigitalocean.app${post.attributes.FeaturedImage.data.attributes.url}`}
             alt={post.attributes.Title}
             className="w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
             />
