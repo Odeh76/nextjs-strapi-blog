@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 const PostCard = ({ post }) => {
 
+  console.log(process.env.NEXT_PUBLIC_STRAPI_ENDPOINT)
+  console.log(process.env.NEXT_PUBLIC_STRAPI_ENDPOINT_PRODUCTION)
+
   return (
     <div className='container w-10/12 max-w-[960px] mx-auto rounded'>
       <div className='block relative overflow-hidden'>
