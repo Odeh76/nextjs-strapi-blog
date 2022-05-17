@@ -12,15 +12,15 @@ const PostCard = ({ post }) => {
         </Link>
       </h1>
       <p className='pb-8 px-4'>{post.Content}</p>
-       {/* <Image
+       <Image
           width={760}
           height={760}
           layout="responsive"
           quality={95}
-          src={`http://localhost:1337${post.FeaturedImage.data.attributes.url}`}
+          src={`https://nextjs-strapi-blog-app-sawyn.ondigitalocean.app/api${post.FeaturedImage.data.attributes.url}`}
           alt={post.Title}
           className="w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
-          /> */}
+          />
       </div>
     </div>
   )
