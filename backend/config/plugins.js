@@ -1,15 +1,20 @@
 module.exports = ({ env }) => ({
-    // ...
-    upload: {
+  upload: {
       config: {
-        provider: "strapi-provider-upload-dos",
-        providerOptions: {
-          key: env('DO_SPACE_ACCESS_KEY'),
-          secret: env('DO_SPACE_SECRET_KEY'),
-          endpoint: env('DO_SPACE_ENDPOINT'),
-          space: env('DO_SPACE_BUCKET'),
-        },
+      breakpoints: {
+          large: 1600,
+          medium: 1100,
+          small: 700,
       },
-    },
-    // ...
-  });
+      provider: "strapi-provider-upload-digitalocean-next",
+      providerOptions: {
+      accessKeyId: env("AWS_ACCESS_KEY_ID"),
+      secretAccessKey: env("AWS_ACCESS_SECRET"),
+      endpoint: env("AWS_DOMAIN"),
+      params: {
+          Bucket: env("AWS_BUCKET"),
+              },
+          },
+      },
+  },
+});
