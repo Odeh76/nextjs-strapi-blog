@@ -16,7 +16,7 @@ module.exports = ({ env }) => [
           "connect-src": ["'self'", "next-strapi-blog-bucket"],
           "img-src": [
             "'self'",
-            "next-strapi-blog-bucket",
+            "next-strapi-blog-bucket/images",
             "data:",
             "blob:",
             `${env("DO_SPACE_BUCKET")}.${env("DO_SPACE_ENDPOINT")}`,
