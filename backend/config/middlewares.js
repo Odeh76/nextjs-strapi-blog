@@ -13,17 +13,17 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:next-strapi-blog-bucket"],
+          "connect-src": ["'self'", "next-strapi-blog-bucket"],
           "img-src": [
             "'self'",
-            "https:next-strapi-blog-bucket",
+            "next-strapi-blog-bucket",
             "data:",
             "blob:",
             `${env("DO_SPACE_BUCKET")}.${env("DO_SPACE_ENDPOINT")}`,
           ],
           "media-src": [
             "'self'",
-            "https:next-strapi-blog-bucket",
+            "next-strapi-blog-bucket",
             "data:",
             "blob:",
             `${env("DO_SPACE_BUCKET")}.${env("DO_SPACE_ENDPOINT")}`,
