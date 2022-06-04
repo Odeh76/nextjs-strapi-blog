@@ -1,5 +1,22 @@
 module.exports = [
   // ...
+  'strapi::errors',
+  'strapi::security',
+  'strapi::poweredBy',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      headers: '*',
+      origin: ['https://nextjs-strapi-blog-app-sawyn.ondigitalocean.app']
+    }
+  },
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
   {
     name: 'strapi::security',
     config: {
