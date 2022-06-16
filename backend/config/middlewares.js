@@ -8,7 +8,7 @@ module.exports = [
     config: {
       enabled: true,
       headers: '*',
-      origin: ['https://nextjs-strapi-blog-app-sawyn.ondigitalocean.app']
+      origin: ['*']
     }
   },
   'strapi::logger',
@@ -29,14 +29,14 @@ module.exports = [
             'data:',
             'blob:',
             'dl.airtable.com',
-            'next-strapi-bucket.s3.us-west-1.amazonaws.com',
+            'next-strapi-blog-bucket.s3.amazonaws.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'dl.airtable.com',
-            'next-strapi-bucket.s3.us-west-1.amazonaws.com',
+            'next-strapi-blog-bucket.s3.amazonaws.com',
           ],
           upgradeInsecureRequests: null,
         },
@@ -44,4 +44,5 @@ module.exports = [
     },
   },
   // ...
+  
 ];
