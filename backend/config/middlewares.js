@@ -1,22 +1,5 @@
-module.exports = [
-  // ...
+module.exports = ({ env }) => [
   'strapi::errors',
-  'strapi::security',
-  'strapi::poweredBy',
-  {
-    name: 'strapi::cors',
-    config: {
-      enabled: true,
-      headers: '*',
-      origin: ['*']
-    }
-  },
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
   {
     name: 'strapi::security',
     config: {
@@ -24,25 +7,19 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'dl.airtable.com',
-            'next-strapi-blog-bucket.s3.amazonaws.com',
-          ],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'dl.airtable.com',
-            'next-strapi-blog-bucket.s3.amazonaws.com',
-          ],
+          'img-src': ["'self'", 'data:', 'blob:', 'https://next-strapi-blog-bucket.s3.us-west-1.amazonaws.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'https://next-strapi-blog-bucket.s3.us-west-1.amazonaws.com'],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  // ...
-  
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
 ];
