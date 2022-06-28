@@ -6,11 +6,11 @@ module.exports = ({ env }) => {
       connection: {
         client: 'postgres',
         connection: {
-          host: env('DATABASE_HOST', '127.0.0.1'),
-          port: env.int('DATABASE_PORT', 5432),
-          database: env('DATABASE_NAME', 'strapi'),
-          user: env('DATABASE_USERNAME', 'strapi'),
-          password: env('DATABASE_PASSWORD', 'strapi'),
+          host: env('DATABASE_HOST', 'db-postgresql-sfo3-02783-do-user-10854830-0.b.db.ondigitalocean.com'),
+          port: env.int('DATABASE_PORT', 25060),
+          database: env('DATABASE_NAME', 'defaultdb'),
+          user: env('DATABASE_USERNAME', 'doadmin'),
+          password: env('DATABASE_PASSWORD', 'AVNS_FocYjOuDHyFtB_FHsT4'),
           ssl: {
             rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
           },
@@ -30,5 +30,3 @@ module.exports = ({ env }) => {
     }
   }  
 };
-
-// test
