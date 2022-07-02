@@ -1,10 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
 import { getPostDetails } from '../../services'
+import { useRouter } from 'next/router'
+import Loader from '../../components/Loader'
 
 
 const PostDetails = ({post}) => {
+  const router = useRouter();
 
+  if(router.isFallback) {
+    return <Loader />
+  }
 
   return (
     <>
@@ -44,7 +50,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
