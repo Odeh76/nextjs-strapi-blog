@@ -16,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "required": true
     }

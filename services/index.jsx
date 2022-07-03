@@ -9,7 +9,7 @@ export const getPosts = async () => {
         data{
           attributes{
             Title
-            Slug
+            slug
             Excerpt
             Content
             FeaturedImage{
@@ -29,14 +29,14 @@ export const getPosts = async () => {
     return result.posts.data
 }
 
-export const getPostDetails = async (Slug) => {
+export const getPostDetails = async (slug) => {
   const query = gql`
-  query GetPostDetails($Slug: String) {
-    posts(filters: {Slug:{eq:$Slug}}){
+  query GetPostDetails($slug: String) {
+    posts(filters: {slug:{eq:$slug}}){
       data{
         attributes{
           Title
-          Slug
+          slug
           Excerpt
           Content
           FeaturedPost
@@ -67,7 +67,7 @@ export const getPostDetails = async (Slug) => {
   }
   `
 
-  const result = await request(graphqlAPI, query, {Slug});
+  const result = await request(graphqlAPI, query, {slug});
   return result.posts.data
 }
 
@@ -78,7 +78,7 @@ export const getCategories = async () => {
       data{
         attributes{
           Name
-          Slug
+          slug
         }
       }
     }
@@ -96,7 +96,7 @@ export const getNavLinks = async () => {
       data{
         attributes{
           Name
-          Slug
+          slug
         }
       }
     }
@@ -114,7 +114,7 @@ export const getFooterLinks = async () => {
       data{
         attributes{
           Name
-          Slug
+          slug
           SocialMediaUrl
         }
       }

@@ -13,7 +13,7 @@ const Categories = () => {
     <div>
       Categories
       {categories.map((category) => (
-        <Link key={category.attributes.Slug} href={`/category/${category.attributes.Slug}`}>
+        <Link key={category.attributes.slug} href={`/category/${category.attributes.slug}`}>
           <span className='font-bold cursor-pointer text-white block pb-3 mb-3'>{category.attributes.Name}</span>
         </Link>
       ))}

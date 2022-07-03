@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     <div className='container w-10/12 max-w-[960px] mx-auto rounded'>
       <div className='block relative overflow-hidden'>
       <h1 className='transition duration-100 text-left mb-6 px-4 mt-4 cursor-pointer hover:text-green-600 text-3xl font-semibold'>
-        <Link href={`/post/${post.Slug}`}>
+        <Link href={`/post/${post.slug}`}>
           {post.Title}
         </Link>
       </h1>

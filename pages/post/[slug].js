@@ -42,20 +42,14 @@ const PostDetails = ({post}) => {
 
 export async function getStaticPaths() {
   const posts = await getPostDetails();
-  const paths = posts.map((post) => {
-    return {
-      params: {Slug: post.attributes.Slug.toString()}
-    }
-  })
-
   return {
-    paths,
-    fallback: true
-  }
+    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+    fallback: true,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostDetails(params.Slug);
+  const data = await getPostDetails(params.slug);
   return {
     props: {
       post: data,

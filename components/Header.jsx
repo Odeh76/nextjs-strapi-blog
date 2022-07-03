@@ -25,7 +25,7 @@ const Header = () => {
             </div>
             <div>
                 {navLinks.map((navLink) => (
-                    <Link key={navLink.attributes.Slug} href={`/${navLink.attributes.Slug}`}>
+                    <Link key={navLink.attributes.slug} href={`/${navLink.attributes.slug}`}>
                     <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full px-2 mt-2 align-middle text-2xl ml-4 font-semibold cursor-pointer'>
                         {navLink.attributes.Name}
                     </span>
