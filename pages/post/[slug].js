@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { getPostDetails } from '../../services'
+import { getPostDetails, getPosts } from '../../services'
 import { useRouter } from 'next/router'
 import Loader from '../../components/Loader'
 
@@ -40,13 +40,7 @@ const PostDetails = ({post}) => {
 
 
 
-export async function getStaticPaths() {
-  const posts = await getPostDetails();
-  return {
-    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: true,
-  };
-}
+
 
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
@@ -57,7 +51,13 @@ export async function getStaticProps({ params }) {
   };
 }
 
-
-
+export async function getStaticPaths() {
+  const posts = await getPostDetails();
+  const paths = posts.map(({ slug }) => ({ params: { slug: `${slug}` } }))
+  return {
+    paths: paths,
+    fallback: true,
+  };
+}
 
 export default PostDetails
