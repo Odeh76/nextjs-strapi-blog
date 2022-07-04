@@ -16,25 +16,40 @@ const Header = () => {
   return (
     <div className='container mx-auto px-10 mb-8'>
         <div className='border-b w-full inline-block border-white-400 py-8'>
-            <div className='md:float-left block'>
+            <div className='flex justify-center items-center cursor-pointer font-bold text-xl text-black dark:text-white'>
+                    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+                     className='mx-2'>
+                     {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
+                    </button>
                 <Link href='/'>
-                    <span className='hidden md:float-left md:contents cursor-pointer font-bold text-4xl text-black dark:text-white'>
-                        AO
+                    <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
+                        Home
                     </span>
                 </Link>
-            </div>
-            <div>
+                <Link href='/about'>
+                    <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
+                        About
+                    </span>
+                </Link>
+                <Link href='/projects'>
+                    <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
+                        Projects
+                    </span>
+                </Link>
+                <Link href='/blog'>
+                    <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
+                        Blog
+                    </span>
+                </Link>
+            {/* <div>
                 {navLinks.map((navLink) => (
                     <Link key={navLink.attributes.slug} href={`/${navLink.attributes.slug}`}>
                     <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full px-2 mt-2 align-middle text-2xl ml-4 font-semibold cursor-pointer'>
-                        {navLink.attributes.Name}
+                    {navLink.attributes.Name}
                     </span>
                     </Link>
-                ))}
-                    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                     className='float-right mt-2 px-2 md:py-2 text-black dark:text-white'>
-                     {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
-                    </button>
+                    ))}
+                </div> */}
             </div>
         </div>
     </div>
