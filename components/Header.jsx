@@ -8,35 +8,30 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
 const Header = () => {
     const [navLinks, setNavLinks] = useState([]);
-    const {theme, setTheme} = useTheme()
+    const {theme, setTheme} = useTheme();
     
     useEffect(() => {
       getNavLinks().then((newLinks) => setNavLinks(newLinks))
     }, [])
   return (
     <div className='container mx-auto px-10 mb-8'>
-        <div className='border-b w-full inline-block border-white-400 py-8'>
-            <div className='flex items-center cursor-pointer font-bold text-xl text-black dark:text-white'>
-                    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                     className=''>
-                     {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
-                    </button>
+            <div className='border-b w-full inline-block border-white-400 py-8'>
+                <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className='mx-2'>
+                {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
+                </button>
                 <Link href='/'>
-                    <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full align-middle text-xl font-semibold cursor-pointer'>
+                    <span className='mx-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full text-xl font-semibold cursor-pointer'>
                         Home
                     </span>
                 </Link>
-            <div>
                 {navLinks.map((navLink) => (
                     <Link key={navLink.attributes.slug} href={`/${navLink.attributes.slug}`}>
-                    <span className='mx-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full text-xl font-semibold cursor-pointer'>
-                    {navLink.attributes.Name}
-                    </span>
+                        <span className='mx-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full text-xl font-semibold cursor-pointer'>
+                        {navLink.attributes.Name}
+                        </span>
                     </Link>
                     ))}
-                </div>
             </div>
-        </div>
     </div>
   )
 }
