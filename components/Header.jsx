@@ -14,25 +14,27 @@ const Header = () => {
       getNavLinks().then((newLinks) => setNavLinks(newLinks))
     }, [])
   return (
+    <>
     <div className='container mx-auto px-10 mb-8'>
             <div className='border-b w-full inline-block border-white-400 py-8'>
                 <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className='mx-2'>
                 {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
                 </button>
                 <Link href='/'>
-                    <span className='mx-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full text-xl font-semibold cursor-pointer'>
+                    <span className='p-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full text-xl font-semibold cursor-pointer'>
                         Home
                     </span>
                 </Link>
                 {navLinks.map((navLink) => (
                     <Link key={navLink.attributes.slug} href={`/${navLink.attributes.slug}`}>
-                        <span className='mx-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full text-xl font-semibold cursor-pointer'>
+                        <span className='p-2 hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black md:float-right rounded-full text-xl font-semibold cursor-pointer'>
                         {navLink.attributes.Name}
                         </span>
                     </Link>
                     ))}
             </div>
     </div>
+    </>
   )
 }
 

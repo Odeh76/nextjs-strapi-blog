@@ -125,3 +125,8 @@ export const getFooterLinks = async () => {
   const result = await request(graphqlAPI, query);
   return result.footers.data
 }
+
+export const onClickMailToHandler = (e) => {
+  e.preventDefault();
+  window.location.href = 'mailto:abdullahsayshello@gmail.com'
+}
