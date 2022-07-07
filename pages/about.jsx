@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
   return (
     <div className='container mx-auto px-10 mb-8 font-semibold text-black dark:text-white'>
-        <h1 className='text-2xl font-bold'>Hello! My name is Abdullah.</h1>
+        <h1 className='text-2xl font-bold'>My name is Abdullah.</h1>
         <p className='text-xl py-8'>
          I am a Web Developer specializing in building modern web applications. I created this portfolio / blog to combine
          my programming and writing hobbies into one space. I got interested in web development in 2018 and have been actively learning about it since.   
@@ -17,7 +17,7 @@ function About() {
           <li>GraphQL</li>
           <li>Wordpress</li>
         </ul> */}
-         <div className='text-2xl py-8'>
+         <div className='text-xl py-8'>
          This blog / portfolio is built with:
          <div className='grid grid-cols-2 text-lg max-w-[400px] py-2 gap-2'>
             <a target="_blank" href='https://nextjs.org/'>NextJS</a>
