@@ -39,18 +39,4 @@ const Header = () => {
 }
 
 export default Header
-                // <Link href='/about'>
-                //     <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
-                //         About
-                //     </span>
-                // </Link>
-                // <Link href='/projects'>
-                //     <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
-                //         Projects
-                //     </span>
-                // </Link>
-                // <Link href='/blog'>
-                //     <span className='hover:bg-black hover:text-white dark:hover:bg-slate-50 dark:hover:text-black rounded-full px-2'>
-                //         Blog
-                //     </span>
-                // </Link>
+       

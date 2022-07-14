@@ -5,7 +5,7 @@ import { getPosts } from '../services'
 function Blog({posts}) {
   return (
         <div className='container w-10/12 max-w-[960px] mx-auto'>
-          <h1 className='text-4xl mb-8 font-semibold'>Things I've written about... </h1>
+          <h1 className='text-xl md:text-4xl mb-8 font-semibold'>Things I've written about... </h1>
           <div className='block relative overflow-hidden shadow-md pb-80 mb-6 bg-black text-white dark:bg-white dark:text-black rounded'>
             {posts?.map((post, index) => (
               <>

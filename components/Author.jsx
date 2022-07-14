@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Author = () => {
+const Author = ({post}) => {
   return (
-    <h1>Author</h1>
+    <h1>
+    </h1>
   )
 }
 
