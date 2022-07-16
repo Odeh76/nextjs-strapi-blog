@@ -18,10 +18,10 @@ const PostDetails = ({post}) => {
       <>
       <div className='container w-10/12 max-w-[960px] mx-auto rounded bg-black text-white dark:bg-white dark:text-black px-10 mb-8 shadow-lg pb-12'>
         <div className='mx-auto block relative overflow-hidden shadow-md pb-80 mb-6'>
-            <h1 className='pb-8 py-4 px-4 text-3xl font-semibold'>Author: {post.attributes.Name}</h1>
-            <h1 className='pb-8 transition duration-100 text-left mb-6 px-4 mt-4 text-3xl font-semibold'>Title: {post.attributes.Title}</h1>
-            <h1 className='pb-8 px-4'>Excerpt: {post.attributes.Excerpt}</h1>
-            <p className='pb-8 px-4'>Content: {post.attributes.Content}</p>
+            <h1 className='pb-8 py-4 px-4 text-3xl font-semibold'>{post.attributes.Name}</h1>
+            <h1 className='pb-8 transition duration-100 text-left mb-6 px-4 mt-4 text-3xl font-semibold'>{post.attributes.Title}</h1>
+            <h1 className='pb-8 px-4'>{post.attributes.Excerpt}</h1>
+            <p className='pb-8 px-4'>{post.attributes.Content}</p>
             <Image
             width={760}
             height={760}
