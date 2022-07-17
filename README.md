@@ -1,7 +1,7 @@
-### Next.js (https://nextjs.org "Next Homepage")
-### Strapi
-### GraphQL
-### TailwindCSS 
+### Next.js (https://nextjs.org)
+### Strapi (https://strapi.io)
+### GraphQL (https://graphql.org)
+### TailwindCSS (https://tailwindcss.com)
 
 #### In the project directory, you can run:
 
