@@ -1,7 +1,7 @@
-# Next.js
-# Strapi
-# GraphQL
-# TailwindCSS 
+### Next.js
+### Strapi
+### GraphQL
+### TailwindCSS 
 
 In the project directory, you can run:
 
