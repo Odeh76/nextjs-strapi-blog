@@ -1,3 +1,4 @@
+Control click links to open pages separately
 ### Next.js (https://nextjs.org)
 ### Strapi (https://strapi.io)
 ### GraphQL (https://graphql.org)
