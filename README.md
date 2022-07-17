@@ -1,4 +1,4 @@
-### Next.js (https://nextjs.org Next Homepage)
+### Next.js (https://www.google.com "Google's Homepage")
 ### Strapi
 ### GraphQL
 ### TailwindCSS 
