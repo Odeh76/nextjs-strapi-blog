@@ -1,4 +1,4 @@
-### Next.js
+### Next.js (https://nextjs.org)
 ### Strapi
 ### GraphQL
 ### TailwindCSS 
