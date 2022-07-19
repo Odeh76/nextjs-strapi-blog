@@ -11,6 +11,7 @@
 ### `npm run dev`
 
 #### In a separate terminal:
-### `cd backend`
+### `cd nextjs-strapi-blog/backend`
+### `npm install`
 ### `npm run develop`
 
