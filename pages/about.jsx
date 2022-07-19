@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import profilepic from '../public/profile.jpg'
+import profilepic from '../public/profile.png'
 function About() {
   return (
     <div className='container mx-auto px-10 mb-8 font-semibold text-black dark:text-white md:flex gap-8 justify-center items-center'>
