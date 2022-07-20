@@ -17,8 +17,6 @@ function About({ aboutPage }) {
          Learning to build things on the web has become a deep passion of mine, and I continually strive to contribute to the process of building
          useful products.  
         </p>
-         
-
           This blog / portfolio is built with:
          <div className='grid grid-cols-2 text-lg py-2 gap-2'>
             <a target="_blank" href='https://nextjs.org/'>NextJS</a>
