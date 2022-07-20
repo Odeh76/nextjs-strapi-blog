@@ -71,6 +71,29 @@ export const getPostDetails = async (slug) => {
   return result.posts.data
 }
 
+export const getAboutPage = async () => {
+  const query = gql`
+  query {
+    abouts{
+      data{
+        attributes{
+          Name
+          Content
+          FeaturedImage{
+            data{
+              attributes{
+                url
+                alternativeText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `
+}
+
 export const getCategories = async () => {
   const query = gql`
   query GetCategories{

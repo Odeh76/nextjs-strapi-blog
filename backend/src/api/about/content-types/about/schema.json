@@ -16,9 +16,20 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "Content": {
       "type": "richtext",
       "required": true
+    },
+    "FeaturedImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
