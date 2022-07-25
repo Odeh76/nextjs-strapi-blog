@@ -3,7 +3,7 @@ import { onClickMailToHandler } from '../services'
 
 
 
-const Home = ({ posts }) => {
+const Home = () => {
 
 
   return (

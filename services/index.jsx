@@ -73,7 +73,7 @@ export const getPostDetails = async (slug) => {
 
 export const getAboutPage = async () => {
   const query = gql`
-  query {
+  query getAboutPage {
     abouts{
       data{
         attributes{
@@ -92,6 +92,9 @@ export const getAboutPage = async () => {
     }
   }
   `
+
+  const result = await request(graphqlAPI, query);
+  return result.abouts.data
 }
 
 export const getCategories = async () => {
