@@ -28,11 +28,7 @@ function About({ aboutPage }) {
       </div>
            )
          }
-           {/* <h1>This blog / portfolio is built with:</h1>
-            <a target="_blank" href='https://nextjs.org/'>NextJS</a>
-            <a target="_blank" href='https://tailwindcss.com/'>TailwindCSS</a>
-            <a target="_blank" href='https://strapi.io/'>Strapi</a>
-            <a target="_blank" href='https://graphql.org/'>GraphQL</a>  */}
+           
 
 
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getNavLinks } from '../services'
-import Footer from '../components/Footer'
 import {useTheme} from 'next-themes'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
