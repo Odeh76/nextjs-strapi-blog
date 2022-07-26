@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { onClickMailToHandler } from '../services'
 
-
+console.log('hello')
 
 const Home = () => {
-
+  
 
   return (
     <div className="container flex flex-col justify-center items-center mx-auto px-10 mb-8">
